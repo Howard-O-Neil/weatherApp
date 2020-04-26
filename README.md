@@ -3,4 +3,6 @@ Winform weather forecasting app
 
 Requre Mysql database in host machine
 
-website: mingkhoi.com
+website: https://mingkhoi.com/Products/
+
+ps: please dont drop my table!
