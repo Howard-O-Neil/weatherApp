@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3704521-D410-4AFC-8364-82751E52F30C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>weatherAPP</RootNamespace>
+    <AssemblyName>weatherAPP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\mingkhoi\Desktop\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationRevision>25</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3B727979592F5FF995962B2DA7E36268FECF021E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>weatherAPP_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.30\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DevExpress.Charts.v19.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DevExpress.Data.v19.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Map.v19.1.Core, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DevExpress.Map.v19.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DevExpress.Utils.v19.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DevExpress.XtraCharts.v19.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DevExpress.XtraCharts.v19.1.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DevExpress.XtraEditors.v19.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraMap.v19.1, Version=19.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\DevExpress.XtraMap.v19.1.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="notepad\display.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notepad\display.Designer.cs">
+      <DependentUpon>display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notepad\note.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="notepad\note.Designer.cs">
+      <DependentUpon>note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notepad\tabNote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="notepad\tabNote.Designer.cs">
+      <DependentUpon>tabNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notification\update_available.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notification\update_available.Designer.cs">
+      <DependentUpon>update_available.cs</DependentUpon>
+    </Compile>
+    <Compile Include="weeklyWeather\detail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="weeklyWeather\detail.Designer.cs">
+      <DependentUpon>detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="weeklyWeather\fullContent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="weeklyWeather\fullContent.Designer.cs">
+      <DependentUpon>fullContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="weeklyWeather\tab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="weeklyWeather\tab.Designer.cs">
+      <DependentUpon>tab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historyControl\currentWeather.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="historyControl\currentWeather.Designer.cs">
+      <DependentUpon>currentWeather.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historyControl\subMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="historyControl\subMenu.Designer.cs">
+      <DependentUpon>subMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historyControl\tabCurrent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="historyControl\tabCurrent.Designer.cs">
+      <DependentUpon>tabCurrent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historyControl\tabWeekly.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="historyControl\tabWeekly.Designer.cs">
+      <DependentUpon>tabWeekly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historyControl\weeklyWeather.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="historyControl\weeklyWeather.Designer.cs">
+      <DependentUpon>weeklyWeather.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notification\cannot_find_user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notification\cannot_find_user.Designer.cs">
+      <DependentUpon>cannot_find_user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notification\create_account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notification\create_account.Designer.cs">
+      <DependentUpon>create_account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notification\existed_username.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notification\existed_username.Designer.cs">
+      <DependentUpon>existed_username.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notification\loading_information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notification\loading_information.Designer.cs">
+      <DependentUpon>loading_information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notification\network_error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notification\network_error.Designer.cs">
+      <DependentUpon>network_error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="weatherData\API_caller.cs" />
+    <Compile Include="bingMapControl\map.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="bingMapControl\map.Designer.cs">
+      <DependentUpon>map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="weatherData\current_data.cs" />
+    <Compile Include="weeklyWeather\weather.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="weeklyWeather\weather.Designer.cs">
+      <DependentUpon>weather.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lockscreen\lockscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lockscreen\lockscreen.Designer.cs">
+      <DependentUpon>lockscreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lockscreen\signIn\signIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lockscreen\signIn\signIn.Designer.cs">
+      <DependentUpon>signIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lockscreen\signUp\signUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="lockscreen\signUp\signUp.Designer.cs">
+      <DependentUpon>signUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainApp.Designer.cs">
+      <DependentUpon>mainApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="splash.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="weatherData\Helper.cs" />
+    <Compile Include="weatherData\MySqlDataBinding.cs" />
+    <Compile Include="weatherData\MySqlQuery.cs" />
+    <Compile Include="weatherData\news_data.cs" />
+    <Compile Include="weatherData\weekly_data.cs" />
+    <Compile Include="weatherInfo\information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="weatherInfo\information.Designer.cs">
+      <DependentUpon>information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="currentWeather\weather.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="currentWeather\weather.Designer.cs">
+      <DependentUpon>weather.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="bingMapControl\map.resx">
+      <DependentUpon>map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notepad\display.resx">
+      <DependentUpon>display.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notepad\note.resx">
+      <DependentUpon>note.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notepad\tabNote.resx">
+      <DependentUpon>tabNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notification\update_available.resx">
+      <DependentUpon>update_available.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="weeklyWeather\detail.resx">
+      <DependentUpon>detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="weeklyWeather\fullContent.resx">
+      <DependentUpon>fullContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="weeklyWeather\weather.resx">
+      <DependentUpon>weather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="weeklyWeather\tab.resx">
+      <DependentUpon>tab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historyControl\currentWeather.resx">
+      <DependentUpon>currentWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historyControl\subMenu.resx">
+      <DependentUpon>subMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historyControl\tabCurrent.resx">
+      <DependentUpon>tabCurrent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historyControl\tabWeekly.resx">
+      <DependentUpon>tabWeekly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historyControl\weeklyWeather.resx">
+      <DependentUpon>weeklyWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lockscreen\lockscreen.resx">
+      <DependentUpon>lockscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lockscreen\signIn\signIn.resx">
+      <DependentUpon>signIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lockscreen\signUp\signUp.resx">
+      <DependentUpon>signUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainApp.resx">
+      <DependentUpon>mainApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notification\cannot_find_user.resx">
+      <DependentUpon>cannot_find_user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notification\create_account.resx">
+      <DependentUpon>create_account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notification\existed_username.resx">
+      <DependentUpon>existed_username.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notification\loading_information.resx">
+      <DependentUpon>loading_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notification\network_error.resx">
+      <DependentUpon>network_error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="weatherInfo\information.resx">
+      <DependentUpon>information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="currentWeather\weather.resx">
+      <DependentUpon>weather.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include=".editorconfig" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="weatherAPP_1_TemporaryKey.pfx" />
+    <None Include="weatherAPP_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+  </Target>
+</Project>

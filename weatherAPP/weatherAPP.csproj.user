@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectView>ProjectFiles</ProjectView>
+    <PublishUrlHistory>C:\Users\mingkhoi\Desktop\publish\|ftp://ftp.mingkhoi.com/|//localhost/app/|http://localhost/app/|\\localhost\Users\mingkhoi\Desktop\publish\</PublishUrlHistory>
+    <InstallUrlHistory>http://localhost/app/|\\localhost\Users\mingkhoi\Desktop\publish\|https://drive.google.com/open%3fid=12NFfrIU6GeTIBiMeSCF4yruIO5biRW5X/</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>
