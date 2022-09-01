@@ -1,7 +1,9 @@
 # Weather App
 Winform weather forecasting app
 
-Require Mysql database if u want to develop my project
+Require MariaDB/SQLLite if u want to develop my project
++ Host MariaDB (public connection string)
++ Embeded SQLLite (data stay on local)
 
 ## Demo 
 
